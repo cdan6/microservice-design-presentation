@@ -1,4 +1,4 @@
-# Crash course on databases
+# A one-year retro on the LCM
 
 To run the presentation:
 
