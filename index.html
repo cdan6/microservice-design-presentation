@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/solarized.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Load Case Manager</h1>
+
+					<p>A one-year retrospective</p>
+				</section>
+				<section>
+					<h2>The requirements</h2>
+					<ul>
+						<li>reusable load cases</li>
+						<li>usable from any product</li>
+						<li class="fragment">"now, stop asking questions"</li>
+					</ul>
+				</section>
+				<section>
+					<h2>The easy decisions</h2>
+					<ul>
+						<li class="fragment fade-in-then-semi-out">use GitHub
+						<ul>
+							<li>CI/CD</li>
+							<li>modern dev experience</li>
+						</ul></li>
+						<li class="fragment fade-in-then-semi-out">as few dependencies as possible</li>
+						<li class="fragment fade-in-then-semi-out">microservice
+						<ul>
+							<li>free to use any tech stack</li>
+							<li>limited codebase</li>
+							<li>no dependency with Ansys products whatsoever</li>
+						</ul></li>
+						<li class="fragment fade-in-then-semi-out">
+							<span class="fragment strike">support DPF's simulation data model</span>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<section>
+						<h2>More research needed</h2>
+						<ul>
+							<li>What language?</li>
+							<table style="font-size:0.6em">
+								<tr>
+									<th>Language</th>
+									<th>Pros</th>
+									<th>Cons</th>
+								</tr>
+								<tr>
+									<td>C++</td>
+									<td>Native, works everywhere</td>
+									<td>Hard in all aspects</td>
+								</tr>
+								<tr>
+									<td>Python</td>
+									<td>Popular<br>Easy at first glance</td>
+									<td>Slow</td>
+								</tr>
+								<tr>
+									<td>Golang</td>
+									<td>Native<br>Easy</td>
+									<td>"Go-what, you say?"</td>
+								</tr>
+								<tr class="fragment highlight-green grow">
+									<td>C#</td>
+									<td>Modern<br>Relatively easy</td>
+									<td>May require interop if native dependency is added</td>
+								</tr>
+							</table>
+						</ul>
+					</section>
+					<section>
+						<h2>More research needed (cont.)</h2>
+						<ul>
+							<li>What DBMS?</li>
+							<span style="font-size:0.6em">
+								<p>Started with MongoDB</p>
+								<ul>
+									<li>Some past experience with it</li>
+									<li>Easy</li>
+									<li>Fast</li>
+									<li>Scalable</li>
+								</ul>
+								<p>Later on, switched to a graph DB: Neo4j.</p>
+							</span>
+							<li>What API?</li>
+								<ul style="font-size:0.6em">
+									<li>Data model accessor</li>
+									<li>GraphQL</li>
+									<li>gRPC + JSON API</li>
+								</ul>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<h2>Architecture</h2>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/math/math.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ],
+			});
+		</script>
+	</body>
+</html>

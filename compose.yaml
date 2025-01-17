@@ -1,0 +1,7 @@
+services:
+  structurizr:
+    image: structurizr/lite:3262
+    volumes:
+      - ./structurizr/:/usr/local/structurizr
+    ports:
+      - 127.0.0.1:8080:8080
