@@ -25,8 +25,7 @@
 					<h2>The requirements</h2>
 					<ul>
 						<li>reusable load cases</li>
-						<li>usable from any product</li>
-						<li class="fragment">"now, stop asking questions"</li>
+						<li>usable from any Ansys products</li>
 					</ul>
 				</section>
 				<section>
@@ -37,7 +36,6 @@
 							<li>CI/CD</li>
 							<li>modern dev experience</li>
 						</ul></li>
-						<li class="fragment fade-in-then-semi-out">as few dependencies as possible</li>
 						<li class="fragment fade-in-then-semi-out">microservice
 						<ul>
 							<li>free to use any tech stack</li>
@@ -98,16 +96,120 @@
 								<p>Later on, switched to a graph DB: Neo4j.</p>
 							</span>
 							<li>What API?</li>
-								<ul style="font-size:0.6em">
-									<li>Data model accessor</li>
-									<li>GraphQL</li>
-									<li>gRPC + JSON API</li>
-								</ul>
+							<ul style="font-size:0.6em">
+								<li>Data model accessor</li>
+								<li>GraphQL</li>
+								<li>gRPC + JSON API</li>
+							</ul>
 						</ul>
 					</section>
 				</section>
 				<section>
-					<h2>Architecture</h2>
+					<section>
+						<h2>Architecture</h2>
+						<table style="font-size:0.6em">
+							<tr>
+								<td>
+									<ul style="vertical-align:bottom">
+										<li>Modularity: components with clear responsibilities</li>
+										<li>Loose coupling: interfaces between components</li>
+										<li>Use Dependency Injection</li>
+									</ul>
+								</td>
+								<td><img class="column" src="assets/lcm1.png"/></td>
+							</tr>
+						</table>
+
+					</section>
+					<section>
+						<h2>Architecture (cont.)</h2>
+						<p style="font-size:0.6em">Evolution example: add CLI executable invoking the same business logic as the API</p>
+						<img src="assets/lcm4.png"/>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>DevOps</h2>
+						<p>Off to a good start:</p>
+						<ul style="vertical-align: top">
+							<li>CI build with branch protection</li>
+							<li class="fragment">Unit Tests</li>
+							<li class="fragment">Guidelines & Documentation
+								<ul style="font-size:0.8em">
+									<li>Helps onboarding new devs</li>
+									<li>Use markdown files</li>
+								</ul>
+							</li>
+						</ul>
+						<span class="r-stack">
+							<img class="fragment current-visible" src="assets/readme_src.png"/>
+							<img class="fragment current-visible" src="assets/readme.png"/>
+						</span>
+					</section>
+					<section>
+						<h2>DevOps (cont.)</h2>
+						<ul>
+							<li>Keep artifacts up to date
+								<ul style="font-size:0.8em">
+									<li>Build and push Docker image to ghcr.io</li>
+									<li>Package and upload a Python client to Artifactory 🚧</li>
+									 <li>Build and upload a C# client to Artifactory 🚧</li>
+								</ul>
+							</li>
+							<li>Keep deployments up to date 🚧
+								<ul style="font-size:0.8em">
+									<li>Two Fuji spaces: <code>prod</code> and <code>dev</code></li>
+									<li><code>prod</code> runs latest release</li>
+									<li><code>dev</code> runs tip of main branch</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h2>DevOps (cont.)</h2>
+						<span>Options to run GitHub workflows</span>
+						<div class="r-stack">
+						<ul>
+							<span class="fragment">
+								<li>Use GH-provided runners</li>
+									<ul style="font-size:0.6em">
+										<li>Easy, maintenance free</li>
+										<li>Preinstalled, runtime customization only</li>
+										<li>No access to Ansys resources</li>
+									</ul>
+								</li>
+							</span>
+							<span class="fragment">
+								<li>Use self-hosted runners</li>
+									<ul style="font-size:0.6em">
+										<li>Needs a VM</li>
+										<li>Hard to containerize because of manual registration</li>
+										<li>Can access the Ansys network</li>
+									</ul>
+								</li>
+							</span>
+							<span class="fragment">
+								<li>Use runner scale sets</li>
+									<ul style="font-size:0.6em">
+										<li>Scalable</li>
+										<li>IT provides a few of them</li>
+										<li>Can access the Ansys network</li>
+									</ul>
+								</li>
+							</span>
+						</ul>
+						<pre class="fragment" ><code data-trim data-line-numbers="|4">
+jobs:
+  build:
+    name: "Build and push image"
+    runs-on: ansys-internal-arc-dind-runner-scale-set
+
+    steps:
+    - uses: actions/checkout@v4
+      name: Checkout this repo
+						</code></pre>
+						</div>
+					</section>
 				</section>
 			</div>
 		</div>

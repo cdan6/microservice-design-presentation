@@ -1,0 +1,426 @@
+{
+  "id" : 1,
+  "name" : "Load Case Manager",
+  "description" : "A service to manage reusable load cases",
+  "lastModifiedDate" : "2025-01-20T14:54:10Z",
+  "lastModifiedAgent" : "structurizr-javascript",
+  "properties" : {
+    "structurizr.dsl" : "d29ya3NwYWNlICJMb2FkIENhc2UgTWFuYWdlciIgIkEgc2VydmljZSB0byBtYW5hZ2UgcmV1c2FibGUgbG9hZCBjYXNlcyIgewogICAgIWlkZW50aWZpZXJzIGhpZXJhcmNoaWNhbAoKICAgIG1vZGVsIHsKICAgICAgICBkYiA9IHNvZnR3YXJlU3lzdGVtICJEQiIgewogICAgICAgICAgICBkZXNjcmlwdGlvbiAiREIiCiAgICAgICAgICAgIHRhZ3MgZGF0YWJhc2UgbGV2ZWwxCiAgICAgICAgfQogICAgICAgIGxjbSA9IHNvZnR3YXJlU3lzdGVtICJMQ00iIHsKICAgICAgICAgICAgZGVzY3JpcHRpb24gIk1hbmFnZXMgTG9hZCBDYXNlcyIKICAgICAgICAgICAgZHJpdmVyID0gY29udGFpbmVyICJEQiBEcml2ZXIiIHsKICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJEQiBEcml2ZXIiCiAgICAgICAgICAgICAgICB0YWdzIGxldmVsMQogICAgICAgICAgICAgICAgLT4gZGIKICAgICAgICAgICAgfQogICAgICAgICAgICBidXNpbmVzc0xvZ2ljID0gY29udGFpbmVyICJCdXNpbmVzcyBMb2dpYyIgewogICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIkltcGxlbWVudHMgdGhlIGludGVybmFsIGxvZ2ljIgogICAgICAgICAgICAgICAgdGFncyBsZXZlbDEKICAgICAgICAgICAgICAgIC0+IGRyaXZlcgogICAgICAgICAgICB9CiAgICAgICAgICAgIGFwaSA9IGNvbnRhaW5lciAiUHVibGljIEFQSSIgewogICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIkV4cG9zZXMgZmVhdHVyZXMgdG8gY2xpZW50cyIKICAgICAgICAgICAgICAgIHRhZ3MgbGV2ZWwxCiAgICAgICAgICAgICAgICAtPiBidXNpbmVzc0xvZ2ljCiAgICAgICAgICAgIH0KICAgICAgICAgICAgYXBpMiA9IGNvbnRhaW5lciAiQWRkaXRpb25hbCBBUEkiIHsKICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJVc2VzIGEgZGlmZmVyZW50IHRlY2giCiAgICAgICAgICAgICAgICB0YWdzIGxldmVsMgogICAgICAgICAgICAgICAgLT4gYnVzaW5lc3NMb2dpYwogICAgICAgICAgICB9CgogICAgICAgICAgICBjbGkgPSBjb250YWluZXIgIkNMSSIgewogICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIkNvbW1hbmQgTGluZSBJbnRlcmZhY2UiCiAgICAgICAgICAgICAgICB0YWdzIGxldmVsMwogICAgICAgICAgICAgICAgdGFncyBleGVjdXRhYmxlCiAgICAgICAgICAgICAgICAtPiBidXNpbmVzc0xvZ2ljICIiICIiCiAgICAgICAgICAgIH0KICAgICAgICB9CgogICAgICAgIGNsaWVudCA9IHNvZnR3YXJlU3lzdGVtICJDbGllbnQiIHsKICAgICAgICAgICAgZGVzY3JpcHRpb24gIlVzZXIgb3IgcHJvZ3JhbSIKICAgICAgICAgICAgdGFncyBsZXZlbDEKICAgICAgICAgICAgIC0+IGxjbS5hcGkgIiIgIiIgZXh0ZXJuYWwKICAgICAgICB9CgogICAgICAgIGFkbWluID0gcGVyc29uICJBZG1pbiIgewogICAgICAgICAgICBkZXNjcmlwdGlvbiAiQWRtaW5pc3RyYXRvciBvZiB0aGUgaW5zdGFuY2UiCiAgICAgICAgICAgIHRhZ3MgbGV2ZWwzCiAgICAgICAgICAgICAtPiBsY20uY2xpICIiICIiIGV4dGVybmFsCiAgICAgICAgfQoKICAgICAgICBib3QgPSBzb2Z0d2FyZVN5c3RlbSAiQm90IiB7CiAgICAgICAgICAgIGRlc2NyaXB0aW9uICJDb25zdW1lciIKICAgICAgICAgICAgdGFncyBib3QgbGV2ZWwyCiAgICAgICAgICAgICAtPiBsY20uYXBpMiAiIiAiIiBleHRlcm5hbAogICAgICAgIH0KICAgIH0KCiAgICB2aWV3cyB7CiAgICAgICAgdGhlbWUgZGVmYXVsdAogICAgICAgIHN0eWxlcyB7CiAgICAgICAgICAgIGVsZW1lbnQgZXh0ZXJuYWwgewogICAgICAgICAgICAgICAgYmFja2dyb3VuZCBncmV5CiAgICAgICAgICAgICAgICBzaGFwZSBCb3gKICAgICAgICAgICAgfQogICAgICAgICAgICBlbGVtZW50IGRhdGFiYXNlIHsKICAgICAgICAgICAgICAgIHNoYXBlIEN5bGluZGVyCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCBpbl9icm93c2VyIHsKICAgICAgICAgICAgICAgIHNoYXBlIFdlYkJyb3dzZXIKICAgICAgICAgICAgfQogICAgICAgICAgICBlbGVtZW50IGV4ZWN1dGFibGUgewogICAgICAgICAgICAgICAgc2hhcGUgRGlhbW9uZAogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsZW1lbnQgYm90IHsKICAgICAgICAgICAgICAgIHNoYXBlIFJvYm90CiAgICAgICAgICAgIH0KICAgICAgICAgICAgcmVsYXRpb25zaGlwIFJlbGF0aW9uc2hpcCB7CiAgICAgICAgICAgICAgICByb3V0aW5nIE9ydGhvZ29uYWwKICAgICAgICAgICAgICAgIHN0eWxlIHNvbGlkCiAgICAgICAgICAgIH0KICAgICAgICAgICAgcmVsYXRpb25zaGlwIGV4dGVybmFsIHsKICAgICAgICAgICAgICAgIHJvdXRpbmcgQ3VydmVkCiAgICAgICAgICAgICAgICBwb3NpdGlvbiA0MAogICAgICAgICAgICB9CiAgICAgICAgfQogICAgICAgIHN5c3RlbUNvbnRleHQgbGNtICJMQ01Db250ZXh0IiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgIH0KICAgICAgICBjb250YWluZXIgbGNtICJMQ01Db250YWluZXJzMSIgewogICAgICAgICAgICBpbmNsdWRlIGVsZW1lbnQudGFnPT1sZXZlbDEKICAgICAgICB9CiAgICAgICAgY29udGFpbmVyIGxjbSAiTENNQ29udGFpbmVyczIiIHsKICAgICAgICAgICAgaW5jbHVkZSBlbGVtZW50LnRhZz09bGV2ZWwyCiAgICAgICAgICAgIGluY2x1ZGUgZWxlbWVudC50YWc9PWxldmVsMQogICAgICAgIH0KICAgICAgICBjb250YWluZXIgbGNtICJMQ01Db250YWluZXJzMyIgewogICAgICAgICAgICBpbmNsdWRlIGVsZW1lbnQudGFnPT1sZXZlbDMKICAgICAgICAgICAgaW5jbHVkZSBlbGVtZW50LnRhZz09bGV2ZWwxCiAgICAgICAgfQogICAgfQoKICAgIGNvbmZpZ3VyYXRpb24gewogICAgICAgIHNjb3BlIHNvZnR3YXJlc3lzdGVtCiAgICB9Cgp9Cg=="
+  },
+  "configuration" : {
+    "scope" : "SoftwareSystem"
+  },
+  "model" : {
+    "people" : [ {
+      "id" : "17",
+      "tags" : "Element,Person,level3",
+      "properties" : {
+        "structurizr.dsl.identifier" : "admin"
+      },
+      "name" : "Admin",
+      "description" : "Administrator of the instance",
+      "relationships" : [ {
+        "id" : "19",
+        "sourceId" : "17",
+        "destinationId" : "2",
+        "linkedRelationshipId" : "18"
+      }, {
+        "id" : "18",
+        "tags" : "Relationship,external",
+        "properties" : {
+          "structurizr.dsl.identifier" : "3e74be77-99b1-4ec2-9793-af84a1d76da1"
+        },
+        "sourceId" : "17",
+        "destinationId" : "12"
+      } ],
+      "location" : "Unspecified"
+    } ],
+    "softwareSystems" : [ {
+      "id" : "14",
+      "tags" : "Element,Software System,level1",
+      "properties" : {
+        "structurizr.dsl.identifier" : "client"
+      },
+      "name" : "Client",
+      "description" : "User or program",
+      "relationships" : [ {
+        "id" : "15",
+        "tags" : "Relationship,external",
+        "properties" : {
+          "structurizr.dsl.identifier" : "37b87075-7a89-43c7-9c7b-1f6ab7259dca"
+        },
+        "sourceId" : "14",
+        "destinationId" : "8"
+      }, {
+        "id" : "16",
+        "sourceId" : "14",
+        "destinationId" : "2",
+        "linkedRelationshipId" : "15"
+      } ],
+      "location" : "Unspecified",
+      "documentation" : { }
+    }, {
+      "id" : "2",
+      "tags" : "Element,Software System",
+      "properties" : {
+        "structurizr.dsl.identifier" : "lcm"
+      },
+      "name" : "LCM",
+      "description" : "Manages Load Cases",
+      "relationships" : [ {
+        "id" : "5",
+        "sourceId" : "2",
+        "destinationId" : "1",
+        "linkedRelationshipId" : "4"
+      } ],
+      "location" : "Unspecified",
+      "containers" : [ {
+        "id" : "6",
+        "tags" : "Element,Container,level1",
+        "properties" : {
+          "structurizr.dsl.identifier" : "lcm.businesslogic"
+        },
+        "name" : "Business Logic",
+        "description" : "Implements the internal logic",
+        "relationships" : [ {
+          "id" : "7",
+          "tags" : "Relationship",
+          "properties" : {
+            "structurizr.dsl.identifier" : "ccfbd25d-4085-40bd-b653-1df8fbdf58aa"
+          },
+          "sourceId" : "6",
+          "destinationId" : "3"
+        } ],
+        "documentation" : { }
+      }, {
+        "id" : "3",
+        "tags" : "Element,Container,level1",
+        "properties" : {
+          "structurizr.dsl.identifier" : "lcm.driver"
+        },
+        "name" : "DB Driver",
+        "description" : "DB Driver",
+        "relationships" : [ {
+          "id" : "4",
+          "tags" : "Relationship",
+          "properties" : {
+            "structurizr.dsl.identifier" : "8caeb606-59d9-4beb-b522-3c7383bb9599"
+          },
+          "sourceId" : "3",
+          "destinationId" : "1"
+        } ],
+        "documentation" : { }
+      }, {
+        "id" : "8",
+        "tags" : "Element,Container,level1",
+        "properties" : {
+          "structurizr.dsl.identifier" : "lcm.api"
+        },
+        "name" : "Public API",
+        "description" : "Exposes features to clients",
+        "relationships" : [ {
+          "id" : "9",
+          "tags" : "Relationship",
+          "properties" : {
+            "structurizr.dsl.identifier" : "61450f48-7d9f-4e20-9440-4f9cfa3b7e3d"
+          },
+          "sourceId" : "8",
+          "destinationId" : "6"
+        } ],
+        "documentation" : { }
+      }, {
+        "id" : "12",
+        "tags" : "Element,Container,level3,executable",
+        "properties" : {
+          "structurizr.dsl.identifier" : "lcm.cli"
+        },
+        "name" : "CLI",
+        "description" : "Command Line Interface",
+        "relationships" : [ {
+          "id" : "13",
+          "tags" : "Relationship",
+          "properties" : {
+            "structurizr.dsl.identifier" : "e09be698-473e-44c1-b1b6-768883c358d9"
+          },
+          "sourceId" : "12",
+          "destinationId" : "6"
+        } ],
+        "documentation" : { }
+      }, {
+        "id" : "10",
+        "tags" : "Element,Container,level2",
+        "properties" : {
+          "structurizr.dsl.identifier" : "lcm.api2"
+        },
+        "name" : "Additional API",
+        "description" : "Uses a different tech",
+        "relationships" : [ {
+          "id" : "11",
+          "tags" : "Relationship",
+          "properties" : {
+            "structurizr.dsl.identifier" : "42735043-693d-4013-9f90-5f617630d7ae"
+          },
+          "sourceId" : "10",
+          "destinationId" : "6"
+        } ],
+        "documentation" : { }
+      } ],
+      "documentation" : { }
+    }, {
+      "id" : "1",
+      "tags" : "Element,Software System,database,level1",
+      "properties" : {
+        "structurizr.dsl.identifier" : "db"
+      },
+      "name" : "DB",
+      "description" : "DB",
+      "location" : "Unspecified",
+      "documentation" : { }
+    }, {
+      "id" : "20",
+      "tags" : "Element,Software System,bot,level2",
+      "properties" : {
+        "structurizr.dsl.identifier" : "bot"
+      },
+      "name" : "Bot",
+      "description" : "Consumer",
+      "relationships" : [ {
+        "id" : "21",
+        "tags" : "Relationship,external",
+        "properties" : {
+          "structurizr.dsl.identifier" : "751ef02e-7196-4a09-bd27-120c261dde8e"
+        },
+        "sourceId" : "20",
+        "destinationId" : "10"
+      }, {
+        "id" : "22",
+        "sourceId" : "20",
+        "destinationId" : "2",
+        "linkedRelationshipId" : "21"
+      } ],
+      "location" : "Unspecified",
+      "documentation" : { }
+    } ]
+  },
+  "documentation" : { },
+  "views" : {
+    "systemContextViews" : [ {
+      "key" : "LCMContext",
+      "order" : 1,
+      "softwareSystemId" : "2",
+      "paperSize" : "A5_Landscape",
+      "dimensions" : {
+        "width" : 2480,
+        "height" : 1748
+      },
+      "enterpriseBoundaryVisible" : true,
+      "elements" : [ {
+        "id" : "1",
+        "x" : 1850,
+        "y" : 710
+      }, {
+        "id" : "2",
+        "x" : 1115,
+        "y" : 710
+      }, {
+        "id" : "14",
+        "x" : 400,
+        "y" : 715
+      }, {
+        "id" : "17",
+        "x" : 415,
+        "y" : 95
+      }, {
+        "id" : "20",
+        "x" : 400,
+        "y" : 715
+      } ],
+      "relationships" : [ {
+        "id" : "16"
+      }, {
+        "id" : "5"
+      }, {
+        "id" : "22"
+      }, {
+        "id" : "19"
+      } ]
+    } ],
+    "containerViews" : [ {
+      "key" : "LCMContainers3",
+      "order" : 4,
+      "softwareSystemId" : "2",
+      "dimensions" : {
+        "width" : 2465,
+        "height" : 1554
+      },
+      "externalSoftwareSystemBoundariesVisible" : true,
+      "elements" : [ {
+        "id" : "12",
+        "x" : 734,
+        "y" : 529
+      }, {
+        "id" : "1",
+        "x" : 1794,
+        "y" : 199
+      }, {
+        "id" : "3",
+        "x" : 1794,
+        "y" : 762
+      }, {
+        "id" : "14",
+        "x" : 199,
+        "y" : 912
+      }, {
+        "id" : "17",
+        "x" : 224,
+        "y" : 479
+      }, {
+        "id" : "6",
+        "x" : 1259,
+        "y" : 762
+      }, {
+        "id" : "8",
+        "x" : 734,
+        "y" : 962
+      } ],
+      "relationships" : [ {
+        "id" : "18"
+      }, {
+        "id" : "15"
+      }, {
+        "id" : "4"
+      }, {
+        "id" : "13"
+      }, {
+        "id" : "7"
+      }, {
+        "id" : "9"
+      } ]
+    }, {
+      "key" : "LCMContainers2",
+      "order" : 3,
+      "softwareSystemId" : "2",
+      "dimensions" : {
+        "width" : 2370,
+        "height" : 1491
+      },
+      "externalSoftwareSystemBoundariesVisible" : true,
+      "elements" : [ {
+        "id" : "1",
+        "x" : 1699,
+        "y" : 199
+      }, {
+        "id" : "3",
+        "x" : 1699,
+        "y" : 719
+      }, {
+        "id" : "14",
+        "x" : 199,
+        "y" : 914
+      }, {
+        "id" : "6",
+        "x" : 1194,
+        "y" : 719
+      }, {
+        "id" : "8",
+        "x" : 694,
+        "y" : 899
+      }, {
+        "id" : "20",
+        "x" : 224,
+        "y" : 464
+      }, {
+        "id" : "10",
+        "x" : 694,
+        "y" : 539
+      } ],
+      "relationships" : [ {
+        "id" : "15"
+      }, {
+        "id" : "4"
+      }, {
+        "id" : "11"
+      }, {
+        "id" : "7"
+      }, {
+        "id" : "21"
+      }, {
+        "id" : "9"
+      } ]
+    }, {
+      "key" : "LCMContainers1",
+      "order" : 2,
+      "softwareSystemId" : "2",
+      "dimensions" : {
+        "width" : 2615,
+        "height" : 1386
+      },
+      "externalSoftwareSystemBoundariesVisible" : true,
+      "elements" : [ {
+        "id" : "1",
+        "x" : 1604,
+        "y" : 178
+      }, {
+        "id" : "3",
+        "x" : 1604,
+        "y" : 528
+      }, {
+        "id" : "14",
+        "x" : 34,
+        "y" : 718
+      }, {
+        "id" : "6",
+        "x" : 1080,
+        "y" : 528
+      }, {
+        "id" : "8",
+        "x" : 557,
+        "y" : 718
+      } ],
+      "relationships" : [ {
+        "id" : "15"
+      }, {
+        "id" : "4"
+      }, {
+        "id" : "7"
+      }, {
+        "id" : "9"
+      } ]
+    } ],
+    "configuration" : {
+      "branding" : { },
+      "styles" : {
+        "elements" : [ {
+          "tag" : "external",
+          "background" : "#808080",
+          "shape" : "Box"
+        }, {
+          "tag" : "database",
+          "shape" : "Cylinder"
+        }, {
+          "tag" : "in_browser",
+          "shape" : "WebBrowser"
+        }, {
+          "tag" : "executable",
+          "shape" : "Diamond"
+        }, {
+          "tag" : "bot",
+          "shape" : "Robot"
+        } ],
+        "relationships" : [ {
+          "tag" : "Relationship",
+          "style" : "Solid",
+          "routing" : "Orthogonal"
+        }, {
+          "tag" : "external",
+          "routing" : "Curved",
+          "position" : 40
+        } ]
+      },
+      "themes" : [ "https://static.structurizr.com/themes/default/theme.json" ],
+      "terminology" : { },
+      "metadataSymbols" : "SquareBrackets",
+      "lastSavedView" : "LCMContainers3"
+    }
+  }
+}
