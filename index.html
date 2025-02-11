@@ -32,18 +32,18 @@
 				<section>
 					<h2>The easy decisions</h2>
 					<ul>
-						<li class="fragment fade-in-then-semi-out">use GitHub
+						<li class="fragment fade-in">use GitHub
 						<ul>
 							<li>CI/CD</li>
 							<li>modern dev experience</li>
 						</ul></li>
-						<li class="fragment fade-in-then-semi-out">microservice
+						<li class="fragment fade-in">microservice
 						<ul>
 							<li>free to use any tech stack</li>
 							<li>limited codebase</li>
 							<li>no dependency with Ansys products whatsoever</li>
 						</ul></li>
-						<li class="fragment fade-in-then-semi-out">
+						<li class="fragment fade-in">
 							<span class="fragment strike">support DPF's simulation data model</span>
 						</li>
 					</ul>
@@ -53,15 +53,15 @@
 						<h2>More research needed</h2>
 						<ul>
 							<li>What language?</li>
-							<table style="font-size:0.6em">
+							<table class="fragment data-fragment-index="1" style="font-size:0.6em">
 								<tr>
 									<th>Language</th>
 									<th>Pros</th>
 									<th>Cons</th>
 								</tr>
-								<tr class="fragment">
+								<tr>
 									<td>C++</td>
-									<td>Native, works everywhere</td>
+									<td>Native, works everywhere<br>DPF's native language</td>
 									<td>Hard in all aspects</td>
 								</tr>
 								<tr class="fragment">
@@ -120,6 +120,7 @@
 								<td><img class="column" src="assets/lcm1.png"/></td>
 							</tr>
 						</table>
+						<span style="font-size:0.3em">(This is a <a href="https://c4model.com/">C4 model</a> done with <a href="https://docs.structurizr.com/">Structurizr</a>)</span>
 
 					</section>
 					<section>
@@ -150,14 +151,14 @@
 					<section>
 						<h2>DevOps (cont.)</h2>
 						<ul>
-							<li>Keep artifacts up to date
+							<li class="fragment">Keep artifacts up to date
 								<ul style="font-size:0.8em">
 									<li>Build and push Docker image to ghcr.io</li>
 									<li>Package and upload a Python client to Artifactory 🚧</li>
 									 <li>Build and upload a C# client to Artifactory 🚧</li>
 								</ul>
 							</li>
-							<li>Keep deployments up to date 🚧
+							<li class="fragment">Keep deployments up to date 🚧
 								<ul style="font-size:0.8em">
 									<li>Two Fuji spaces: <code>prod</code> and <code>dev</code></li>
 									<li><code>prod</code> runs latest release</li>
@@ -168,10 +169,10 @@
 					</section>
 					<section>
 						<h2>DevOps (cont.)</h2>
-						<span>Options to run GitHub workflows</span>
+						<span>How to run GitHub workflows</span>
 						<div class="r-stack">
 						<ul>
-							<span class="fragment">
+							<span class="fragment" data-fragment-index="1">
 								<li>Use GH-provided runners</li>
 									<ul style="font-size:0.6em">
 										<li>Easy, maintenance free</li>
@@ -180,7 +181,7 @@
 									</ul>
 								</li>
 							</span>
-							<span class="fragment">
+							<span class="fragment" data-fragment-index="3">
 								<li>Use self-hosted runners</li>
 									<ul style="font-size:0.6em">
 										<li>Needs a VM</li>
@@ -189,7 +190,7 @@
 									</ul>
 								</li>
 							</span>
-							<span class="fragment">
+							<span class="fragment" data-fragment-index="5">
 								<li>Use runner scale sets</li>
 									<ul style="font-size:0.6em">
 										<li>Scalable</li>
@@ -199,7 +200,27 @@
 								</li>
 							</span>
 						</ul>
-						<pre class="fragment" ><code data-trim data-line-numbers="|4">
+						<pre class="fragment fade-in-then-out" data-fragment-index="2"><code data-trim data-line-numbers="4">
+jobs:
+  build:
+    name: "Build and push image"
+    runs-on: [ubuntu-latest]
+
+    steps:
+    - uses: actions/checkout@v4
+      name: Checkout this repo
+						</code></pre>
+						<pre class="fragment fade-in-then-out" data-fragment-index="4"><code data-trim data-line-numbers="4">
+jobs:
+  build:
+    name: "Build and push image"
+    runs-on: [self-hosted, ubuntu, load-case-manager]
+
+    steps:
+    - uses: actions/checkout@v4
+      name: Checkout this repo
+						</code></pre>
+						<pre class="fragment"  data-fragment-index="6"><code data-trim data-line-numbers="4">
 jobs:
   build:
     name: "Build and push image"
@@ -211,6 +232,30 @@ jobs:
 						</code></pre>
 						</div>
 					</section>
+				</section>
+				<section>
+					<h2>Feedback</h2>
+					<span>Reflection on a year of progress</span>
+					<table style="font-size:0.6em">
+						<tr>
+							<th>What went well 👍️</th>
+						<th>What we'd do differently 😞</th>
+						</tr>
+						<tr>
+							<td>
+								<li>GitHub offers a true DevOps experience</li>
+								<li>Runner scale sets work well and the team is reactive!</li>
+								<li>Groundwork is time well spent (helps to integrate more devs)</li>
+								<li>Impact of design changes limited thanks to modular design</li>
+							</td>
+							<td>
+								<li>DPF's datamodel was too early a decision</li>
+								<span style="font-size:0.6em">Led to wasting time with C++, understanding of their API and self-hosting runners</span>
+								<li>Test coverage needs improved</li>
+								<li>Written specification should be 1st order of business</li>
+							</td>
+						</tr>
+					</table>
 				</section>
 			</div>
 		</div>
